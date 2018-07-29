@@ -3,22 +3,22 @@
 
 users = [
     { 'admin': True, 'active': True, 'name': 'Eric' },
-    { 'admin': True, 'active': False, 'name': 'Jim' },
+    { 'admin': True, 'active': False, 'name': 'Elisabeth' },
     { 'admin': False, 'active': True, 'name': 'Josh' },
-    { 'admin': False, 'active': False, 'name': 'Kim' }
+    { 'admin': False, 'active': False, 'name': 'Kim' },
 ]
 
 line = 1
 
 for user in users:
-    prefix  = f"{line} "
+    prefix = f"{line} "
 
     if user['admin'] and user['active']:
-        prefix += "Active - (ADMIN) "
+        prefix += "ACTIVE - (ADMIN) "
     elif user['admin']:
         prefix += "(ADMIN) "
     elif user['active']:
-        prefix += "Active "
+        prefix += "ACTIVE - "
 
-print(prefix + user['name'])
-line += 1
+    print(prefix + user['name'])
+    line += 1
